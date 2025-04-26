@@ -29,6 +29,8 @@ containers09/
 │   └── script.js
 ```
 
+![](img/1.png)
+
 ### 2. Conținutul fișierelor site-ului
 
 **site/index.html**:
@@ -93,6 +95,8 @@ Comenzi utilizate:
 docker image build -t mynginx:raw -f Dockerfile.raw .
 ```
 
+![](img/2.png)
+
 ---
 
 ### 4. Eliminarea dependențelor neutilizate și fișierelor temporare (mynginx:clean)
@@ -126,6 +130,8 @@ Comenzi:
 docker image build -t mynginx:clean -f Dockerfile.clean .
 ```
 
+![](img/3.png)
+
 ---
 
 ### 5. Minimizarea numărului de straturi (mynginx:few)
@@ -154,6 +160,8 @@ Comenzi:
 ```bash
 docker image build -t mynginx:few -f Dockerfile.few .
 ```
+
+![](img/4.png)
 
 ---
 
@@ -185,6 +193,8 @@ Comenzi:
 docker image build -t mynginx:alpine -f Dockerfile.alpine .
 ```
 
+![](img/5.png)
+
 ---
 
 ### 7. Repachetarea imaginii (mynginx:repack)
@@ -195,6 +205,8 @@ docker container create --name mynginx mynginx:raw
 docker container export mynginx | docker image import - mynginx:repack
 docker container rm mynginx
 ```
+
+![](img/6.png)
 
 ---
 
@@ -228,6 +240,8 @@ docker container export mynginx | docker image import - myngin:min
 docker container rm mynginx
 ```
 
+![](img/7.png)
+
 ---
 
 ### 9. Compararea dimensiunilor imaginilor
@@ -237,7 +251,9 @@ Comandă:
 docker image list
 ```
 
-**Exemplu tabel rezultate** (valorile pot varia):
+![](img/8.png)
+
+**Tabel rezultate** :
 
 | Imagine         | Dimensiune  |
 |-----------------|-------------|
